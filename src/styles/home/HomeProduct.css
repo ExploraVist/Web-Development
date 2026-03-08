@@ -69,8 +69,9 @@
 
 .home-product-glasses-img {
   width: 100%;
-  max-width: min(480px, 44vw);
-  height: auto;
+  max-width: min(340px, 30vw);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
   border-radius: 16px;
   border: 1px solid var(--line-2);
   box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45);
@@ -143,6 +144,6 @@
   }
 
   .home-product-glasses-img {
-    max-width: min(340px, 90vw);
+    max-width: min(300px, 90vw);
   }
 }
