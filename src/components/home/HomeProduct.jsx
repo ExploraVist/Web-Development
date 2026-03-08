@@ -1,8 +1,9 @@
 import React from 'react';
 import { Camera, ScanLine, MessageCircle } from 'lucide-react';
 import SectionBlock from './SectionBlock';
-import glanceGlassesImg from '../../imgs/glance-glasses.png';
-import glanceLanyardImg from '../../imgs/glance-lanyard.png';
+import deviceBeltImg from '../../imgs/device_belt.jpg';
+import deviceHeldImg from '../../imgs/device_held.jpg';
+import deviceLanyardImg from '../../imgs/device_lanyard.jpg';
 import appExploreImg from '../../imgs/app-explore.png';
 import appGalleryImg from '../../imgs/app-gallery.png';
 import appNotesImg from '../../imgs/app-notes-new.png';
@@ -34,8 +35,9 @@ const HomeProduct = () => (
       </ul>
 
       <div className="home-product-glasses-gallery">
-        <img src={glanceGlassesImg} alt="Glance device exploded view alongside glasses" className="home-product-glasses-img" />
-        <img src={glanceLanyardImg} alt="Glance device close-up with lanyard attachment" className="home-product-glasses-img" />
+        <img src={deviceBeltImg} alt="ExploraVist device clipped to a belt" className="home-product-glasses-img" />
+        <img src={deviceHeldImg} alt="ExploraVist device held in hand" className="home-product-glasses-img" />
+        <img src={deviceLanyardImg} alt="ExploraVist device worn on a lanyard" className="home-product-glasses-img" />
       </div>
     </div>
 
