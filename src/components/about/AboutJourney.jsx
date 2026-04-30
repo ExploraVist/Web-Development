@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Play, Pause } from 'lucide-react';
 import SectionBlock from '../home/SectionBlock';
+import howDidWeStart from '../../assets/exploravist_start.mp3';
 import '../../styles/about/AboutJourney.css';
 
 const journeyCards = [
@@ -18,6 +20,20 @@ const journeyCards = [
 ];
 
 const AboutJourney = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [audio] = useState(new Audio(howDidWeStart));
+
+  const toggleAudio = () => {
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  audio.onended = () => setIsPlaying(false);
+
   return (
     <SectionBlock eyebrow="The Journey" title="What inspired our mission?" className="about-journey">
       <div className="about-journey-cards">
@@ -27,6 +43,18 @@ const AboutJourney = () => {
             <p className="about-journey-card-text">{text}</p>
           </div>
         ))}
+      </div>
+
+      <div className="about-journey-origin">
+        <h3 className="about-journey-origin-title">How did ExploraVist start?</h3>
+        <button
+          className="about-journey-audio-btn"
+          onClick={toggleAudio}
+          aria-label={isPlaying ? 'Pause origin story' : 'Play origin story'}
+        >
+          {isPlaying ? <Pause size={22} aria-hidden="true" /> : <Play size={22} aria-hidden="true" />}
+          <span>{isPlaying ? 'Pause Story' : 'Play Story'}</span>
+        </button>
       </div>
     </SectionBlock>
   );
