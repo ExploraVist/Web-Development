@@ -11,8 +11,8 @@ const Privacy = () => {
           <section className='privacy'>
             <section className='privacy_hero'>
               <p className='privacy_header'>Privacy Policy</p>
-              <h2 className='privacy_title'>Your privacy matters to us.</h2>
-              <p className='privacy_effective'>Last updated: {/* TODO: add effective date */}</p>
+              <h2 className='privacy_title'>Coming soon.</h2>
+              <p className='privacy_paragraph'>Our privacy policy is on its way. Please check back soon.</p>
 
               {/* TODO: Privacy policy content goes here. */}
 

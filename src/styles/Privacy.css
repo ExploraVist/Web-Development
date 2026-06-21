@@ -41,8 +41,8 @@
     margin-bottom: 1rem;
 }
 
-.privacy_effective {
-    color: var(--text-3);
-    font-size: 0.95rem;
+.privacy_paragraph {
+    color: var(--text-2);
+    line-height: 1.6;
     margin-bottom: 2.5rem;
 }
