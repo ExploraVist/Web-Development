@@ -99,6 +99,9 @@ const Footer = () => {
       {/* Bottom Note */}
       <div className="footer-bottom" role="contentinfo">
         <p>© 2025 ExploraVist</p>
+        <nav className="footer-legal" aria-label="Legal">
+          <Link to="/privacy" className="footer-legal-link">Privacy Policy</Link>
+        </nav>
       </div>
     </footer>
   );
