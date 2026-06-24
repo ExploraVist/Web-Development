@@ -193,6 +193,18 @@ const PrivacyContent = () => (
           This data is linked to your Firebase installation ID, which is tied to your account if
           you are signed in. In guest mode, events are logged without an account identifier.
         </p>
+        <p>
+          In addition to Firebase, we collect the same usage information through our own
+          first-party telemetry system, which sends usage events directly to ExploraVist's servers
+          over an encrypted connection. This includes the events listed above, screen views, and
+          app session start and end times, along with basic technical context: your app version
+          and build number, your iOS version, and your device model (e.g. "iPhone17,2"). These
+          events contain only structured, non-identifying values — for example, search telemetry
+          records the length of a search query, never the text you searched for. First-party
+          telemetry is linked to your device credential, which is tied to your account when you are
+          signed in. Usage analytics are integral to operating, securing, and improving ExploraVist
+          and are collected for all users as part of providing the service.
+        </p>
 
         <h3 className="privacy-h3">3.5 Diagnostic Data</h3>
         <p className="privacy-source">
@@ -212,6 +224,13 @@ const PrivacyContent = () => (
             active
           </li>
         </ul>
+        <p>
+          App errors are also reported to ExploraVist's own servers through our first-party
+          telemetry system. These error reports contain only technical identifiers — the error
+          category, type, code, and the location in the app where it occurred — and never include
+          error message text or other free-form content. Diagnostic reporting is part of the app's
+          standard operation and is collected for all users.
+        </p>
 
         <h3 className="privacy-h3">3.6 Camera and Photos</h3>
         <p className="privacy-source">Source: Directly from you via the device camera.</p>
@@ -468,6 +487,8 @@ const PrivacyContent = () => (
             ['Location (in notes)', 'On your device only', 'Until you delete the note or uninstall the app'],
             ['Device credentials', 'Our servers', 'Until you sign out or revoke the device'],
             ['Cloud-processed images', 'Our servers (transit)', 'Not retained — deleted after processing'],
+            ['First-party usage & diagnostic telemetry', 'Our servers (Google Cloud Logging)', '30 days, then auto-deleted'],
+            ['Buffered telemetry (not yet sent)', 'On your device only', 'Until uploaded, or purged on account deletion'],
           ]}
         />
       </div>
