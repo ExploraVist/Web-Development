@@ -150,6 +150,21 @@
     color: var(--text-3);
 }
 
+.footer-legal {
+    margin-top: 0.5rem;
+}
+
+.footer-legal-link {
+    color: var(--text-3);
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    transition: color 0.2s ease;
+}
+
+.footer-legal-link:hover {
+    color: var(--text);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .footer-content {
